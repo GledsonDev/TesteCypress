@@ -13,13 +13,13 @@ describe("Teste compra na Amazon", () => {
     cy.log('Adicionar um item no carrinho.');
     cy.get('#twotabsearchtextbox').type('Caneta {enter}');
     cy.get('.s-main-slot .s-result-item[data-component-type="s-search-result"]').first().find('h2 a').click();
-    cy.get('#add-to-cart-button').click({ force: true });
+    cy.get('#add-to-cart-button').click();
 
     // FAZ MAIS UMA ADIÇÃO NO CARRINHO
     cy.log('Faz mais uma adição no carrinho.');
     cy.get('#twotabsearchtextbox').type('Capa de celular {enter}');
     cy.get('.s-main-slot .s-result-item[data-component-type="s-search-result"]').first().find('h2 a').click();
-    cy.get('#add-to-cart-button').click({ force: true });
+    cy.get('#add-to-cart-button').click();
 
     // IR PARA O CARRINHO
     cy.log('Ir ao carrinho.');
