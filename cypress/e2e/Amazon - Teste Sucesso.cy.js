@@ -23,7 +23,7 @@ describe("Teste compra na Amazon", () => {
 
     // ADICIONAR MAIS UM ITEM AO CARRINHO
     cy.log('Adicionar mais um item ao carrinho.');
-    cy.get('#twotabsearchtextbox').type('Carregador {enter}');
+    cy.get('#twotabsearchtextbox').type('Carregador 25w {enter}');
     cy.get('.s-main-slot .s-result-item[data-component-type="s-search-result"]').first().find('h2 a').click();
     cy.get('#add-to-cart-button').click();
 

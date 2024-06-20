@@ -3,15 +3,15 @@ describe('GitHub Login Test', () => {
     cy.visit('https://github.com/login');
   });
 
-  it('Should check if the Username label is associated with the correct input field', () => {
+  it('Verificar se o Nome de usuário está associado ao campo de entrada correto', () => {
     cy.get('label[for="login_field"]').should('contain', 'Username');
   });
 
-  it('Should check if the Password label is associated with the correct input field', () => {
+  it('Verificar se a Senha está associado ao campo de entrada correto', () => {
     cy.get('label[for="password"]').should('contain', 'Password');
   });
 
-  it('Should display error message for unsuccessful login', () => {
+  it('Esperado que se apareça a mensagem de erro para login malsucedido', () => {
     // Digitar o nome de usuário sem problemas
     cy.get('#login_field').type('username inválido');
 
